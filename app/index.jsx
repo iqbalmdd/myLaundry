@@ -11,7 +11,7 @@ const Welcome = () => {
   // if (!loading && isLogged) return <Redirect href="/home" />;
 
   return (
-    <SafeAreaView className="bg-secondary h-full flex justify-center">
+    <SafeAreaView className="bg-secondary-100 h-full flex justify-center">
       <ScrollView
         contentContainerStyle={{
           height: "100%",

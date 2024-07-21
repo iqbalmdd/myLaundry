@@ -4,8 +4,10 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FormField } from "../../components";
@@ -17,14 +19,30 @@ const signUp = () => {
     email: "",
     password: "",
   });
+
+  const scrollViewRef = useRef(null);
+
+  const scrollToInput = (ref) => {
+    setTimeout(() => {
+      scrollViewRef.current.scrollTo({
+        y: ref,
+        animated: true,
+      });
+    }, 100);
+  };
+
   return (
     // <SafeAreaView className="bg-white h-full">
-      <ScrollView className="bg-secondary-100 w-full">
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      className="flex-1"
+    >
+      <ScrollView className="bg-secondary-100 w-full flex-1"
+          ref={scrollViewRef}
+          contentContainerStyle={{ flexGrow: 1 }}>
         <View className="h-full w-full flex items-start ">
           <View className="mt-10 ml-5">
-            <Text className="text-white text-3xl font-pextrabold">
-              Create
-            </Text>
+            <Text className="text-white text-3xl font-pextrabold">Create</Text>
             <Text className="text-white text-3xl font-pextrabold">
               Your Account
             </Text>
@@ -46,7 +64,7 @@ const signUp = () => {
               handleChangeText={(e) =>
                 setSignUpForm({ ...signUpForm, address: e })
               }
-              otherStyles="mt-3"
+              otherStyles="mt-1"
             />
             <FormField
               title="Phone No"
@@ -55,8 +73,9 @@ const signUp = () => {
               handleChangeText={(e) =>
                 setSignUpForm({ ...signUpForm, phoneNo: e })
               }
+              onFocus={() => scrollToInput(50)}
               keyboardType="phone-pad"
-              otherStyles="mt-3"
+              otherStyles="mt-1"
             />
             <FormField
               title="Email"
@@ -65,8 +84,9 @@ const signUp = () => {
               handleChangeText={(e) =>
                 setSignUpForm({ ...signUpForm, email: e })
               }
+              onFocus={() => scrollToInput(300)}
               keyboardType="email-address"
-              otherStyles="mt-2"
+              otherStyles="mt-1"
             />
             <FormField
               title="Password"
@@ -75,7 +95,8 @@ const signUp = () => {
               handleChangeText={(e) =>
                 setSignUpForm({ ...signUpForm, password: e })
               }
-              otherStyles="mt-2"
+              onFocus={() => scrollToInput(300)}
+              otherStyles="mt-1"
             />
             <View className="flex items-center w-full h-14 my-5">
               <TouchableOpacity
@@ -96,6 +117,7 @@ const signUp = () => {
           </View>
         </View>
       </ScrollView>
+    </KeyboardAvoidingView>
     // </SafeAreaView>
   );
 };

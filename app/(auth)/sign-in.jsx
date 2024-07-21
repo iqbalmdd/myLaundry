@@ -18,12 +18,12 @@ const signIn = () => {
   return (
     // <SafeAreaView className="bg-white">
       <ScrollView className="bg-secondary-100 w-full">
-        <View className="h-full w-full flex items-start ">
-          <View className="mt-10 ml-3">
+        <View className="h-full w-full flex items-center ">
+          <View className="mt-10 ml-3 items-center">
             <Text className="text-white text-3xl font-pextrabold">
-              Welcome!
+              Welcome Back!
             </Text>
-            <Text className="text-white text-3xl font-pextrabold">
+            <Text className="text-white text-lg font-psemibold -mt-1">
               Smart Laundry
             </Text>
           </View>

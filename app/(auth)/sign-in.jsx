@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useState } from "react";
+import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FormField } from "../../components";
 
@@ -42,13 +43,13 @@ const signIn = () => {
             otherStyles="mt-2"
             />
             <View className="flex items-center w-full h-14 my-5">
-              <TouchableOpacity className="bg-secondary-100 w-full rounded-xl h-full flex items-center justify-center">
+              <TouchableOpacity className="bg-secondary-100 w-full rounded-xl h-full flex items-center justify-center" onPress={() => router.push('/home')}>
                 <Text className="text-white font-bold">Sign In</Text>
               </TouchableOpacity>
             </View>
             <View className="h-60 w-full flex items-end justify-end">
               <Text className="text-gray-500 text-base">Don't have account?</Text>
-              <Text className="font-pbold text-secondary-100">Sign Up</Text>
+              <Link href="/sign-up" className="font-pbold text-secondary-100">Sign Up</Link>
             </View>
           </View>
         </View>

@@ -40,14 +40,14 @@ const signUp = () => {
       <ScrollView className="bg-secondary-100 w-full flex-1"
           ref={scrollViewRef}
           contentContainerStyle={{ flexGrow: 1 }}>
-        <View className="h-full w-full flex items-start ">
+        <View className="h-full w-full flex items-center ">
           <View className="mt-10 ml-5">
-            <Text className="text-white text-3xl font-pextrabold">Create</Text>
-            <Text className="text-white text-3xl font-pextrabold">
+            <Text className="text-white text-2xl font-pextrabold">
+              <Text className="">Create </Text> 
               Your Account
-            </Text>
+              </Text>
           </View>
-          <View className="flex h-full w-full items-center px-5 mt-10 bg-white rounded-3xl">
+          <View className="flex h-full w-full items-center px-5 mt-10 bg-white shadow-md shadow-black-200 rounded-3xl">
             <FormField
               title="Name"
               placeholder="John Doe"
@@ -98,9 +98,9 @@ const signUp = () => {
               onFocus={() => scrollToInput(300)}
               otherStyles="mt-1"
             />
-            <View className="flex items-center w-full h-14 my-5">
+            <View className="flex items-center w-full h-14 my-5 ">
               <TouchableOpacity
-                className="bg-secondary-100 w-full rounded-xl h-full flex items-center justify-center"
+                className="bg-secondary-100 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
                 onPress={() => router.push("/home")}
               >
                 <Text className="text-white font-bold">Sign Up</Text>

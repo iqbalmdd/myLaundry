@@ -29,7 +29,7 @@ const Welcome = () => {
         </View>
         <View className="flex items-center w-full h-12 my-5">
           <TouchableOpacity 
-          className="bg-primary w-11/12 rounded-full h-full flex items-start justify-center"
+          className="bg-primary shadow shadow-primary w-11/12 rounded-full h-full flex items-center justify-center"
           onPress={() => router.push("/sign-in")}
           >
             <Text className="text-secondary-200 font-bold text-xl ml-4">Get Started!</Text>

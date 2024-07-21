@@ -27,7 +27,7 @@ const signIn = () => {
               Smart Laundry
             </Text>
           </View>
-          <View className="flex h-full w-full items-center px-5 mt-10 bg-white rounded-3xl">
+          <View className="flex h-full w-full items-center px-5 mt-10 bg-white shadow-md shadow-black-200 rounded-3xl">
             <FormField
               title="Email"
               placeholder="yourmail@example.com"
@@ -49,13 +49,13 @@ const signIn = () => {
             />
             <View className="flex items-center w-full h-14 my-5">
               <TouchableOpacity
-                className="bg-secondary-100 w-full rounded-xl h-full flex items-center justify-center"
+                className="bg-secondary-100 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
                 onPress={() => router.push("/home")}
               >
                 <Text className="text-white font-bold">Sign In</Text>
               </TouchableOpacity>
             </View>
-            <View className="h-60 w-full flex items-end justify-end">
+            <View className="h-64 w-full flex items-end justify-end">
               <Text className="text-gray-500 text-base">
                 Don't have account?
               </Text>

@@ -32,7 +32,7 @@ const Welcome = () => {
           className="bg-primary w-5/6 rounded-full h-full flex items-center justify-center"
           onPress={() => router.push("/sign-in")}
           >
-            <Text className="text-secondary-200 font-bold">Sign In</Text>
+            <Text className="text-secondary-200 font-bold">Join Now!</Text>
           </TouchableOpacity>
         </View>
       </View>

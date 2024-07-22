@@ -41,13 +41,13 @@ const signUp = () => {
           ref={scrollViewRef}
           contentContainerStyle={{ flexGrow: 1 }}>
         <View className="h-full w-full flex items-center ">
-          <View className="mt-10 ml-5">
+          <View className="pl-6 w-full h-32 flex justify-center">
+          <Text className="text-white text-2xl font-pextrabold">Create </Text> 
             <Text className="text-white text-2xl font-pextrabold">
-              <Text className="">Create </Text> 
               Your Account
               </Text>
           </View>
-          <View className="flex h-full w-full items-center px-5 mt-10 bg-white shadow-md shadow-black-200 rounded-3xl">
+          <View className="flex h-full w-full items-center px-5 bg-white shadow-md shadow-black-200 rounded-3xl">
             <FormField
               title="Name"
               placeholder="John Doe"

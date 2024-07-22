@@ -23,7 +23,7 @@ const Welcome = () => {
           <View className="flex items-center justify-end w-full h-full p-7">
             <Image
               source={images.shoes_color}
-              className="w-[250px] h-[250px]"
+              className="w-[200px] h-[200px]"
               resizeMode="contain"
             />
           </View>

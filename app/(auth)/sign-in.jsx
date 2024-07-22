@@ -4,11 +4,13 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Image,
 } from "react-native";
 import { useState } from "react";
 import { Link, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FormField } from "../../components";
+import { images } from "../../constants";
 
 const signIn = () => {
   const [signInForm, setSignInForm] = useState({
@@ -19,15 +21,14 @@ const signIn = () => {
     // <SafeAreaView className="bg-white">
       <ScrollView className="bg-secondary-300 w-full">
         <View className="h-full w-full flex items-center ">
-          <View className="mt-10 ml-3 items-center">
-            <Text className="text-white text-3xl font-pextrabold">
-              Welcome Back!
-            </Text>
-            <Text className="text-white text-lg font-psemibold -mt-1">
-              Smart Laundry
-            </Text>
+          <View className="pl-6 w-full h-32 flex justify-center items-center">
+            <Image
+              source={images.logo}
+              className="w-[250px] h-[250px]"
+              resizeMode="contain"
+            />
           </View>
-          <View className="flex h-full w-full items-center px-5 mt-10 bg-white shadow-md shadow-black-200 rounded-3xl">
+          <View className="flex h-full w-full items-center px-5 bg-white shadow-md shadow-black-200 rounded-3xl">
             <FormField
               title="Email"
               placeholder="yourmail@example.com"

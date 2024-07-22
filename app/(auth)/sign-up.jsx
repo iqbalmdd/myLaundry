@@ -37,7 +37,7 @@ const signUp = () => {
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       className="flex-1"
     >
-      <ScrollView className="bg-secondary-100 w-full flex-1"
+      <ScrollView className="bg-secondary-300 w-full flex-1"
           ref={scrollViewRef}
           contentContainerStyle={{ flexGrow: 1 }}>
         <View className="h-full w-full flex items-center ">
@@ -100,7 +100,7 @@ const signUp = () => {
             />
             <View className="flex items-center w-full h-14 my-5 ">
               <TouchableOpacity
-                className="bg-secondary-100 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
+                className="bg-secondary-300 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
                 onPress={() => router.push("/home")}
               >
                 <Text className="text-white font-bold">Sign Up</Text>
@@ -110,7 +110,7 @@ const signUp = () => {
               <Text className="text-gray-500 text-base">
                 Already have account?
               </Text>
-              <Link href="/sign-in" className="font-pbold text-secondary-100">
+              <Link href="/sign-in" className="font-pbold text-secondary-300">
                 Sign In
               </Link>
             </View>

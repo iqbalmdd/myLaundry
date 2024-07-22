@@ -17,7 +17,7 @@ const signIn = () => {
   });
   return (
     // <SafeAreaView className="bg-white">
-      <ScrollView className="bg-secondary-100 w-full">
+      <ScrollView className="bg-secondary-300 w-full">
         <View className="h-full w-full flex items-center ">
           <View className="mt-10 ml-3 items-center">
             <Text className="text-white text-3xl font-pextrabold">
@@ -49,7 +49,7 @@ const signIn = () => {
             />
             <View className="flex items-center w-full h-14 my-5">
               <TouchableOpacity
-                className="bg-secondary-100 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
+                className="bg-secondary-300 shadow shadow-secondary-300 w-full rounded-xl h-full flex items-center justify-center"
                 onPress={() => router.push("/home")}
               >
                 <Text className="text-white font-bold">Sign In</Text>
@@ -59,7 +59,7 @@ const signIn = () => {
               <Text className="text-gray-500 text-base">
                 Don't have account?
               </Text>
-              <Link href="/sign-up" className="font-pbold text-secondary-100">
+              <Link href="/sign-up" className="font-pbold text-secondary-300">
                 Sign Up
               </Link>
             </View>

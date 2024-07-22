@@ -15,10 +15,10 @@ const FormField = ({
 
   return (
     <View className={`space-y-1 ${otherStyles}`}>
-      <Text className="text-base text-secondary-300 ml-2 -mb-1 font-pmedium">{title}</Text>
-      <View className="w-full h-12 px-4 bg-white rounded-xl border-2 border-slate-300 focus:border-secondary-200 flex flex-row items-center">
+      <Text className="text-base text-secondary-300 mt-2 ml-2 -mb-2 font-pmedium">{title}</Text>
+      <View className="w-full h-10 px-4 bg-white rounded-xl border-b-2 border-slate-300 focus:border-secondary-200 flex flex-row items-center">
         <TextInput
-          className="flex-1 text-secondary-200 font-pregular text-base"
+          className="flex-1 text-secondary-300 font-pregular text-base"
           value={value}
           placeholder={placeholder}
           placeholderTextColor="#adc4b1"

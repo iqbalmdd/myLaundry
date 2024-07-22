@@ -42,8 +42,8 @@ const signUp = () => {
           contentContainerStyle={{ flexGrow: 1 }}>
         <View className="h-full w-full flex items-center ">
           <View className="pl-6 w-full h-32 flex justify-center">
-          <Text className="text-white text-2xl font-pextrabold">Create </Text> 
-            <Text className="text-white text-2xl font-pextrabold">
+          <Text className="text-white text-2xl font-pbold">Create </Text> 
+            <Text className="text-primary text-3xl font-pextrabold">
               Your Account
               </Text>
           </View>
